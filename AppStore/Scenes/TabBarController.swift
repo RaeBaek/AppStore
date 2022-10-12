@@ -24,7 +24,7 @@ class TabBarController: UITabBarController {
     
     //TabBar Item 구현 및 선언 - 2
     private lazy var appViewController: UIViewController = {
-        let viewController = UIViewController()
+        let viewController = UINavigationController(rootViewController: AppViewController())
         let tabBarItem = UITabBarItem(
                 title: "앱",
                 image: UIImage(systemName: "square.stack.3d.up"),

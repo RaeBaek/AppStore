@@ -11,7 +11,7 @@ import UIKit
 final class TodayCollectionHeaderView: UICollectionReusableView {
     private lazy var dateLabel: UILabel = {
         let label = UILabel()
-        label.text = "9월 10일 토요일"
+        label.text = "10월 11일 화요일"
         label.font = .systemFont(ofSize: 14.0, weight: .semibold)
         label.textColor = .secondaryLabel
         
