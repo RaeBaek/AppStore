@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 final class TodayCollectionViewCell: UICollectionViewCell {
     
@@ -45,17 +46,20 @@ final class TodayCollectionViewCell: UICollectionViewCell {
         
     }()
     
-    func setup() {
+    func setup(today: Today) {
         setupSubViews()
         
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.3
         layer.shadowRadius = 10
         
-        subTitleLabel.text = "서브타이블"
-        descriptionLabel.text = "설명설명"
-        titleLabel.text = "앱의 이름"
+        titleLabel.text = today.title
+        subTitleLabel.text = today.subTitle
+        descriptionLabel.text = today.description
         
+        if let imageURL = URL(string: today.imageURL) {
+            imageView.kf.setImage(with: imageURL)
+        }
     }
 }
 
